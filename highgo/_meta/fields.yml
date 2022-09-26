@@ -1,0 +1,32 @@
+- key: highgo
+  title: "HighGo"
+  description: >
+    HighGo-specific event fields.
+  fields:
+    - name: highgo
+      type: group
+      fields:
+        - name: error_code
+          description: The HighGo error code.
+          type: long
+
+        - name: error_message
+          description: The HighGo error message.
+
+        - name: error_severity
+          description: The HighGo error severity.
+          possible_values:
+            - ERROR
+            - FATAL
+            - PANIC
+
+        - name: num_fields
+          description: >
+            If the SELECT query if successful, this field is set to the number
+            of fields returned.
+
+        - name: num_rows
+          description: >
+            If the SELECT query if successful, this field is set to the number
+            of rows returned.
+
